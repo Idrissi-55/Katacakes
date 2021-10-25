@@ -1,11 +1,12 @@
 import React from "react";
 import { Card } from 'semantic-ui-react';
 // import PropTypes from 'prop-types';
+import './style.scss';
 
 const CakesList = () => {
   
   return (
-  <div>
+  <div className="cakeList">
     <Card.Group itemsPerRow={2} >
       
         <Card

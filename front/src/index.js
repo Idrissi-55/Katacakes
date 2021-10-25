@@ -11,7 +11,6 @@ import App from 'src/components/App';
 const rootReactElement = (
   <Router>
     <App />
-
   </Router>
 );
 
