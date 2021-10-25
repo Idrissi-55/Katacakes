@@ -7,7 +7,7 @@ import './style.scss';
 
 // == Composant
 const Card = ({
-  id, name, thumbnail, season
+  id, name, thumbnail, season, description
 }) => (
   <article className="card">
     <img
@@ -24,11 +24,12 @@ const Card = ({
   </article>
 );
 
-Header.propTypes = {
+Card.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   thumbnail: PropTypes.string.isRequired,
   season: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   
 };
 

@@ -1,6 +1,7 @@
+import data from 'src/data';
 
 export const initialState = {
-  list: [],
+  list: data,
 }
 
 const reducer = (currentState = initialState, action= {}) => {

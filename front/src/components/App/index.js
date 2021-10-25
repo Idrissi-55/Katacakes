@@ -1,26 +1,45 @@
 // == Import npm
 import React from 'react';
+import { Route } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 // == Import
 import LoginForm from '../LoginForm';
-import Banner from '../Banner/index';
-import Menu from "../Menu/index";
-import CakesList from "../CakesList/index";
+import Banner from 'src/components/Banner';
+import Menu from "src/components/Menu";
+import Cake from "src/containers/Cake"
 import Footer from "../Footer/index";
-
+import Home from "src/containers/Home"
 import './styles.css';
 
 
 // == Composant
-const App = () => (
-  <div className="app">
-    {/* <LoginForm /> */}
-    <Banner />
-    <Menu />
-    <CakesList />
-    <Footer />
-  </div>
-);
+function App(props) {
+  if (props.loading) {
+    return <Loading />;
+  }
+  return (
+    <div className="app">
+      <Banner />
+      <Menu />
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route exact path="/cake/:name">
+        <Cake />
+      </Route>
+      <Footer />
+    </div>
+  );
+}
+
+App.propTypes = {
+  loading: PropTypes.bool,
+};
+
+App.defaultProps = {
+  loading: false,
+};
 
 // == Export
 export default App;
