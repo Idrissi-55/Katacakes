@@ -12,7 +12,9 @@ function Cake({ cake }) {
     return <Redirect to="/error" />;
   }
   return (
-    <Page />
+    <div className="cake">
+      <Page />
+    </div>
   );
 }
 
@@ -22,7 +24,7 @@ Cake.propTypes = {
     thumbnail: PropTypes.string.isRequired,
     season: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-  
+
   }),
 };
 

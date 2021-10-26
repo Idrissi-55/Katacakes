@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 
 // == Import
 import LoginForm from '../LoginForm';
-import Banner from 'src/components/Banner';
 import Menu from "src/components/Menu";
 import Cake from "src/containers/Cake"
 import Footer from "../Footer/index";
@@ -20,7 +19,6 @@ function App(props) {
   }
   return (
     <div className="app">
-      <Banner />
       <Menu />
       <Route exact path="/">
         <Home />

@@ -3,7 +3,7 @@ import React from "react";
 // import LoginForm from '../LoginForm';
 
 import './style.scss'
-import logo from 'src/assets/ressources/logo.png'
+import logo from '../../../public/images/logo.png'
 
 const Banner = () => {
   return (
