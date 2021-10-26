@@ -1,3 +1,5 @@
-.cakeList {
-  padding-top: 180px;
+@use 'src/styles/vars';
+
+.cake {
+  padding: 0 vars.$gutter;
 }

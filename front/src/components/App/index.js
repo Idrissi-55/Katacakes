@@ -8,8 +8,9 @@ import LoginForm from '../LoginForm';
 import Menu from "src/components/Menu";
 import Cake from "src/containers/Cake"
 import Footer from "../Footer/index";
-import Home from "src/containers/Home"
-import './styles.css';
+import Home from "src/containers/Home";
+
+import './style.scss';
 
 
 // == Composant
