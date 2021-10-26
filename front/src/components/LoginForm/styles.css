@@ -1,7 +1,7 @@
 .login-form {
-  /* width: 20%; */
-  /* position: fixed;
-  top: 45px; right: 40px;  */
+  position: absolute;
+  top: 45px; right: 40px;
+  z-index: 100; 
 }
 .login-form-element {
   display: flex;

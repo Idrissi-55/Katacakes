@@ -21,6 +21,7 @@ function App(props) {
   return (
     <div className="app">
       <Menu />
+      <LoginForm />
       <Route exact path="/">
         <Home />
       </Route>

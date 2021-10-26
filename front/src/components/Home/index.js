@@ -7,7 +7,7 @@ import Content from 'src/components/Content';
 
 const Home = ({ cakes }) => (
   <Page>
-    {/* <Banner /> */}
+    <Banner />
     <Content
       title="Welcome to Kata's Cakes"
       text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, explicabo."
