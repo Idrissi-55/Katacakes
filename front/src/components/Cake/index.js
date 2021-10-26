@@ -1,20 +1,35 @@
 // == Import : npm
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 
 // == Import : local
 import './style.scss';
 import Page from 'src/components/Page';
+import Banner from 'src/components/Banner';
+import Header from './Header';
+import Desc from './Description';
 
 // == Composant
 function Cake({ cake }) {
   if (!cake) {
-    return <Redirect to="/error" />;
+    console.log('erreur')
+    // return <Redirect to="/error" />;
   }
   return (
-    <div className="cake">
-      <Page />
-    </div>
+    <Page>
+      <Banner />
+      <div className="cake">
+        <Header
+          name={cake.name}
+          thumbnail={cake.thumbnail}
+          season={cake.season}
+        />
+        <Desc
+          description={cake.description}
+        />
+      </div>
+    </Page>
   );
 }
 

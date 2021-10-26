@@ -14,7 +14,7 @@ const Menu = () => {
       to="/"
       exact
     >
-      About us
+      Our cakes
     </NavLink>
     <NavLink
       activeClassName="menu-link--active"
@@ -22,7 +22,7 @@ const Menu = () => {
       to="/"
       exact
     >
-      Our cakes
+      About us
     </NavLink>
     <NavLink
       activeClassName="menu-link--active"

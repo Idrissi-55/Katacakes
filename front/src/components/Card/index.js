@@ -7,7 +7,7 @@ import './style.scss';
 
 // == Composant
 const Card = ({
-  id, name, thumbnail, season, description
+   id, name, thumbnail, season
 }) => (
   <article className="card">
     <img
@@ -18,7 +18,7 @@ const Card = ({
     <div className="card-content">
       <h1 className="card-name">{name}</h1>
       <p className="card-season">Season : {season}</p>
-      <p className="card-desc">{description}</p>
+      {/* <p className="card-desc">{description}</p> */}
       <a href={`/cake/${id}`} className="card-link">See details</a>
     </div>
   </article>
@@ -29,7 +29,7 @@ Card.propTypes = {
   name: PropTypes.string.isRequired,
   thumbnail: PropTypes.string.isRequired,
   season: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  // description: PropTypes.string.isRequired,
   
 };
 

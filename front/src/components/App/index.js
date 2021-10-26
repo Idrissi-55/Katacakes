@@ -7,8 +7,8 @@ import PropTypes from 'prop-types';
 import LoginForm from '../LoginForm';
 import Menu from "src/components/Menu";
 import Cake from "src/containers/Cake"
-import Footer from "../Footer/index";
 import Home from "src/containers/Home";
+import Footer from "src/components/Footer";
 
 import './style.scss';
 
@@ -21,11 +21,11 @@ function App(props) {
   return (
     <div className="app">
       <Menu />
-      <LoginForm />
+      {/* <LoginForm /> */}
       <Route exact path="/">
         <Home />
       </Route>
-      <Route exact path="/cake/:name">
+      <Route exact path="/cake/:id">
         <Cake />
       </Route>
       <Footer />

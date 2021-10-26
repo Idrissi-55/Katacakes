@@ -1,6 +1,6 @@
 // == Import : npm
 import React from 'react';
-import { render } from 'react-dom';
+import  ReactDom  from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from 'src/store'
@@ -8,7 +8,7 @@ import store from 'src/store'
 
 // == Import : local
 // Composants
-import App from 'src/components/App';
+import App from 'src/containers/App';
 
 
 const rootReactElement = (
@@ -21,4 +21,4 @@ const rootReactElement = (
 
 const target = document.getElementById('root');
 
-render(rootReactElement, target);
+ReactDom.render(rootReactElement, target);
