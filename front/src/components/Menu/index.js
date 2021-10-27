@@ -19,7 +19,7 @@ const Menu = () => {
     <NavLink
       activeClassName="menu-link--active"
       className="menu-link"
-      to="/"
+      to="/About-us"
       exact
     >
       About us
@@ -27,7 +27,7 @@ const Menu = () => {
     <NavLink
       activeClassName="menu-link--active"
       className="menu-link"
-      to="/"
+      to="/FAQ"
       exact
     >
       FAQ
@@ -35,7 +35,7 @@ const Menu = () => {
     <NavLink
       activeClassName="menu-link--active"
       className="menu-link"
-      to="/"
+      to="/Contact-us"
       exact
     >
       Contact us
@@ -56,9 +56,3 @@ const Menu = () => {
 
 export default Menu;
 
-// Abouts us
-// Our Cakes
-// FAQ
-// Contact Us
-// <h1>Welcome to katacakes Delices !</h1>
-// {/* Image */}
