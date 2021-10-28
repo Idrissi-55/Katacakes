@@ -1,5 +1,5 @@
 // import data from 'src/data';
-import { FETCH_CAKES } from "../actions/cakes";
+import { FETCH_CAKES, FETCH_CAKES_SUCCESS } from "../actions/cakes";
 
 export const initialState = {
   list: [],
@@ -10,6 +10,12 @@ const reducer = (currentState = initialState, action= {}) => {
     case FETCH_CAKES: {
       return {
         ...currentState,
+      }
+    }
+    case FETCH_CAKES_SUCCESS: {
+      return {
+        ...currentState,
+        list: action.cakes,
       }
     }
     default:
