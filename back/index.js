@@ -21,22 +21,20 @@ mongoose.connect(
     }
 )
 
-const image = require('./images/Cake 7.jpg')
-
 app.use(cors());
 
 // app.use('/api', router);
 
-app.get("/", async(req, res) => {
-    const cake = new CakeModel({id: 20, name: "testCake", thumbnail: image , season: "autumn", description: "lorem ipsum"});
+// app.get("/", async(req, res) => {
+//     const cake = new CakeModel({id: 20, name: "testCake", thumbnail: image , season: "autumn", description: "lorem ipsum"});
 
-    try{
-        await cake.save();
-        res.send(`${cake}`);
-    } catch(err) {
-        console.log(err)
-    }
-})
+//     try{
+//         await cake.save();
+//         res.send(`${cake}`);
+//     } catch(err) {
+//         console.log(err)
+//     }
+// })
 
 
 app.listen(port, () => console.log(`Server is running on ${port}`));
