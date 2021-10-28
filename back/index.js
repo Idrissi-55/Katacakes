@@ -21,13 +21,14 @@ mongoose.connect(
     }
 )
 
+const image = require('./images/Cake 7.jpg')
 
 app.use(cors());
 
 // app.use('/api', router);
 
 app.get("/", async(req, res) => {
-    const cake = new CakeModel({id: 20, name: "testCake", thumbnail: "/fakePath", season: "autumn", description: "lorem ipsum"});
+    const cake = new CakeModel({id: 20, name: "testCake", thumbnail: image , season: "autumn", description: "lorem ipsum"});
 
     try{
         await cake.save();
