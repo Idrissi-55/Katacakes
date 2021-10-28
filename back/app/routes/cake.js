@@ -1,8 +1,8 @@
 const Cake = require("../models/Cake");
 
-const router = require("express").Router();
+const cakeRouter = require("express").Router();
 
-router.get("/", async (req, res) => {
+cakeRouter.get("/", async (req, res) => {
     let cakes = await Cake.find();
 
     try {
@@ -14,4 +14,4 @@ router.get("/", async (req, res) => {
     }
 })
 
-module.exports = router;
+module.exports = cakeRouter;

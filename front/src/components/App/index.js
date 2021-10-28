@@ -1,5 +1,5 @@
 // == Import npm
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Route, Switch } from "react-router-dom";
 import PropTypes from 'prop-types';
 
@@ -17,10 +17,12 @@ import './style.scss';
 
 
 // == Composant
-function App(props) {
-  if (props.loading) {
-    return <Loading />;
-  }
+function App({fetchCakes}) {
+  
+  useEffect(fetchCakes, []);
+  // if (props.loading) {
+  //   return <Loading />;
+  // }
   return (
     <div className="app">
       <Menu />
@@ -46,14 +48,6 @@ function App(props) {
     </div>
   );
 }
-
-App.propTypes = {
-  loading: PropTypes.bool,
-};
-
-App.defaultProps = {
-  loading: false,
-};
 
 // == Export
 export default App;

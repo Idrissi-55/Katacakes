@@ -10,7 +10,7 @@ const dotenv = require("dotenv").config();
 mongoose
     .connect(
         process.env.MONGODB_URL,
-        // { useNewUrlParser: true, }
+        { useNewUrlParser: true, }
     )
     .then(() => console.log("Connected to DB successfuly"))
     .catch((err)=>{
