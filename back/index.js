@@ -1,40 +1,26 @@
-const express = require ('express');
+const express = require('express');
 const mongoose = require("mongoose")
 const app = express();
+const port = process.env.PORT || 5000;
+const cors = require("cors");
 
-const cors = require("cors")
+//connect to db
+mongoose
+    .connect(
+        "mongodb+srv://test-user:oL6trPKqfQDgvMCM@katacakes.3upik.mongodb.net/Katacakes?retryWrites=true&w=majority",
+        { useNewUrlParser: true, }
+    )
+    .then(() => console.log("Connected to DB successfuly"))
+    .catch((err)=>{
+        console.log(err);
+    })
 
-// const port = process.env.PORT || 1234;
 
-const port = 5000;
-
-const CakeModel = require("./app/models/Cake")
-
-// const router = require('./app/router');
-
-app.use(express.json());
-
-mongoose.connect(
-    "mongodb+srv://test-user:oL6trPKqfQDgvMCM@katacakes.3upik.mongodb.net/Katacakes?retryWrites=true&w=majority",
-    {
-        useNewUrlParser: true,
-    }
-)
+//routers
+const cakeRoute = require('./app/routes/cake');
 
 app.use(cors());
-
-// app.use('/api', router);
-
-// app.get("/", async(req, res) => {
-//     const cake = new CakeModel({id: 20, name: "testCake", thumbnail: image , season: "autumn", description: "lorem ipsum"});
-
-//     try{
-//         await cake.save();
-//         res.send(`${cake}`);
-//     } catch(err) {
-//         console.log(err)
-//     }
-// })
-
+app.use(express.json());
+app.use('/api/cakes', cakeRoute);
 
 app.listen(port, () => console.log(`Server is running on ${port}`));
