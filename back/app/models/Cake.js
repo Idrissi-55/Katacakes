@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const CakeSchema = new mongoose.Schema({
-   id: {type: Number, required: true, unique: true}, 
-   name: {type: String,required: true,}, 
+   // _id: {type: String}, 
+   name: {type: String,required: true, unique: true}, 
    thumbnail: {type: String,required: true,}, 
    season: { type: String,required: true,}, 
    description: {type: String,required: true,}, 

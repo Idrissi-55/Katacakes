@@ -1,5 +1,6 @@
 // == Import : npm
 import React from 'react';
+import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 // == Import : local
@@ -7,7 +8,7 @@ import './style.scss';
 
 // == Composant
 const Card = ({
-   id, name, thumbnail, season
+   _id, name, thumbnail, season
 }) => (
   <article className="card">
     <img
@@ -19,13 +20,13 @@ const Card = ({
       <h1 className="card-name">{name}</h1>
       <p className="card-season">Season : {season}</p>
       {/* <p className="card-desc">{description}</p> */}
-      <a href={`/cake/${id}`} className="card-link">See details</a>
+      <Link to={`/cake/${_id}`} className="card-link">See details</Link>
     </div>
   </article>
 );
 
 Card.propTypes = {
-  id: PropTypes.number.isRequired,
+  _id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   thumbnail: PropTypes.string.isRequired,
   season: PropTypes.string.isRequired,

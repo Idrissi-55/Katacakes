@@ -1,2 +1,5 @@
 ### GET all cakes
 GET http://localhost:5000/api/cakes
+
+### GET a cake
+GET http://localhost:5000/api/cakes/617d4d8f2352f138f62cdb60

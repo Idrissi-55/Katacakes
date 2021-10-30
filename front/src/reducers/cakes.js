@@ -3,6 +3,7 @@ import { FETCH_CAKES, FETCH_CAKES_SUCCESS } from "../actions/cakes";
 
 export const initialState = {
   list: [],
+  idCake: null,
 }
 
 const reducer = (currentState = initialState, action= {}) => {

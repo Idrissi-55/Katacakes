@@ -9,4 +9,4 @@
 //   return cake;
 // }
 
-export const findCake = (list = [], id=1) => list.find((elem) => elem.id == id);
+export const findCake = (list = [], _id=1) => list.find((elem) => elem._id == _id);

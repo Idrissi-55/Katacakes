@@ -35,6 +35,7 @@ function Cake({ cake }) {
 
 Cake.propTypes = {
   cake: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     thumbnail: PropTypes.string.isRequired,
     season: PropTypes.string.isRequired,

@@ -12,7 +12,7 @@ const Content = ({ title, text, cakes }) => (
     {cakes && (
       <div className="content-list">
         {cakes.map((cake) => (
-          <Card key={cake.id} {...cake} />
+          <Card key={cake._id} {...cake} />
         ))}
       </div>
     )}
@@ -24,7 +24,7 @@ Content.propTypes = {
   text: PropTypes.string.isRequired,
   cakes: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      _id: PropTypes.string.isRequired,
     }),
   ),
 };
