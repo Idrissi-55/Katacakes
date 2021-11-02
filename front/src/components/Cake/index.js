@@ -1,5 +1,5 @@
 // == Import : npm
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 
@@ -9,9 +9,11 @@ import Page from 'src/components/Page';
 import Banner from 'src/components/Banner';
 import Header from './Header';
 import Desc from './Description';
+import {fetchCake} from '../../actions/cakes';
 
 // == Composant
-function Cake({ cake }) {
+function Cake({ cake, fetchCake }) {
+  useEffect(() => { fetchCake(), [] })
   if (!cake) {
     console.log('erreur')
     // return <Redirect to="/error" />;
@@ -24,6 +26,8 @@ function Cake({ cake }) {
           name={cake.name}
           thumbnail={cake.thumbnail}
           season={cake.season}
+          idCake={cake._id}
+
         />
         <Desc
           description={cake.description}
@@ -42,6 +46,7 @@ Cake.propTypes = {
     description: PropTypes.string.isRequired,
 
   }),
+  fetchEvent: PropTypes.func.isRequired,
 };
 
 Cake.defaultProps = {

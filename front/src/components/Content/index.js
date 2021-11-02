@@ -18,7 +18,17 @@ const Content = ({ title, text, cakes }) => (
     )}
   </section>
 );
-
+{/* {recipes.map((recipe) => ( */}
+{/* <NavLink
+  exact
+  activeClassName="menu-link--active"
+  key={recipe.id}
+  className="menu-link"
+  to={`/recipe/${recipe.id}`}
+>
+  {recipe.title}
+</NavLink> */}
+{/* ))} */}
 Content.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,

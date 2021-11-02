@@ -1,6 +1,6 @@
 // == Import : npm
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, Navlink } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 // == Import : local
@@ -19,8 +19,9 @@ const Card = ({
     <div className="card-content">
       <h1 className="card-name">{name}</h1>
       <p className="card-season">Season : {season}</p>
-      {/* <p className="card-desc">{description}</p> */}
-      <Link to={`/cake/${_id}`} className="card-link">See details</Link>
+      <Link to={`/cakes/${_id}`} className="card-link">
+      See details
+      </Link>
     </div>
   </article>
 );
@@ -30,9 +31,9 @@ Card.propTypes = {
   name: PropTypes.string.isRequired,
   thumbnail: PropTypes.string.isRequired,
   season: PropTypes.string.isRequired,
-  // description: PropTypes.string.isRequired,
   
 };
 
 // == Export
 export default Card;
+

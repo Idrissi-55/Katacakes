@@ -17,9 +17,9 @@ import './style.scss';
 
 
 // == Composant
-function App({fetchCakes}) {
+function App({fetchAllCakes}) {
   
-  useEffect(fetchCakes, []);
+  useEffect(fetchAllCakes, []);
   // if (props.loading) {
   //   return <Loading />;
   // }
@@ -31,7 +31,7 @@ function App({fetchCakes}) {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/cake/:id">
+        <Route exact path="/cakes/:id">
           <Cake />
         </Route>
         <Route exact path="/About-us">

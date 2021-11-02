@@ -1,12 +1,12 @@
 import axios from 'axios';
-import { fetchCakes, fetchCakesSuccess, FETCH_CAKES, FETCH_CAKE, fetchCakeSuccess } from '../actions/cakes';
+import { fetchAllCakes, fetchAllCakesSuccess, FETCH_ALL_CAKES, FETCH_CAKE, feftchCakeSuccess, fetchCakeSuccess } from '../actions/cakes';
 
 //URL
 const URL = "http://localhost:5000/api";
 
 export default (store) => (next) => (action) => {
   switch (action.type) {
-    case FETCH_CAKES: {
+    case FETCH_ALL_CAKES: {
       next(action);
       console.log("je cherche les cakes");
       axios({
@@ -15,7 +15,7 @@ export default (store) => (next) => (action) => {
       })
       .then((res) => {
         console.log("je reçois ça", res.data);
-        store.dispatch(fetchCakesSuccess(res.data));
+        store.dispatch(fetchAllCakesSuccess(res.data));
       })
       .catch((err) => {
         console.log("une erreur s'est produite")
@@ -23,10 +23,11 @@ export default (store) => (next) => (action) => {
     }
 
   // case FETCH_CAKE: {
+  //   next(action);
   //   const {cake} = store.getState();
   //   axios({
   //     method: 'get',
-  //     url: `${URL}/cake/${cake._id}`,
+  //     url: `${URL}/cakes/${cake._id}`,
   //   })
   //   .then((res) => {
   //     console.log(`je fetch une cake : ${res.data}`);

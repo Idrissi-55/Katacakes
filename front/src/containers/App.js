@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import App from "src/components/App";
-import { fetchCakes } from "src/actions/cakes";
+import { fetchAllCakes } from "src/actions/cakes";
 
 const mapStateToProps = (state) => ({
   loading: state.cakes.loading,
@@ -8,9 +8,9 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchCakes: () => {
+  fetchAllCakes: () => {
     console.log('fetch cakes');
-    const action = fetchCakes();
+    const action = fetchAllCakes();
     dispatch(action);
   }
 });
