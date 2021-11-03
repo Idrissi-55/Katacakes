@@ -26,7 +26,6 @@ function Cake({ cake, fetchCake }) {
           name={cake.name}
           thumbnail={cake.thumbnail}
           season={cake.season}
-          idCake={cake._id}
 
         />
         <Desc
@@ -46,7 +45,7 @@ Cake.propTypes = {
     description: PropTypes.string.isRequired,
 
   }),
-  fetchEvent: PropTypes.func.isRequired,
+  fetchCake: PropTypes.func.isRequired,
 };
 
 Cake.defaultProps = {

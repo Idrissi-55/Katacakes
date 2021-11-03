@@ -2,18 +2,22 @@ import { connect } from 'react-redux';
 import Cake from 'src/components/Cake';
 import { withRouter } from 'react-router-dom';
 
-import { fetchCake } from '../../actions/cakes';
+import { fetchCake, saveID } from '../../actions/cakes';
 
 const mapStateToProps = (state) => ({
   name: state.cake.name,
   thumbnail: state.cake.thumbnail,
   season: state.cake.seaon,
-  description: state.cake.description
+  description: state.cake.description,
+  idCake: state.cake.idCake
 
 })
 const mapDispatchToProps = (dispatch) => ({
-  fetchCake: () => {
-    fetchCake();
+  onclick: () => {
+    dispatch(fetchCake());
+  },
+  saveID: (idCake) => {
+    dispatch(saveID(idCake))
   }
 });
 
