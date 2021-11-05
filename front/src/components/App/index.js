@@ -12,6 +12,7 @@ import Footer from "src/components/Footer";
 import Contact from 'src/components/ContactPage';
 import About from 'src/components/About';
 import Faq from 'src/components/FAQ';
+import Error from '../Error';
 
 import './style.scss';
 
@@ -32,7 +33,7 @@ function App({fetchAllCakes}) {
           <Home />
         </Route>
         <Route exact path="/cakes/:id">
-          <Cake />
+          <Error />
         </Route>
         <Route exact path="/About-us">
           <About />

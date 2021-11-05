@@ -8,8 +8,8 @@ const mapStateToProps = (state) => ({
   name: state.cake.name,
   thumbnail: state.cake.thumbnail,
   season: state.cake.seaon,
-  description: state.cake.description
-
+  description: state.cake.description,
+  
 })
 const mapDispatchToProps = (dispatch) => ({
   fetchCake: () => {
