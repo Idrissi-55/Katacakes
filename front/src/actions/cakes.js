@@ -13,16 +13,3 @@ export const fetchAllCakesSuccess = (cakes) => ({
   cakes,
 })
 
-export const fetchCake = (idCake) => ({
-  type: FETCH_CAKE,
-  idCake
-})
-export const fetchCakeSuccess = (data) => ({
-  type: FETCH_CAKE_SUCCESS,
-  data
-})
-
-export const saveID = (idCake) => ({
-  type: SAVE_ID,
-  idCake,
-})

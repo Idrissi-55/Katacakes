@@ -1,19 +1,25 @@
 // == Import : npm
 import React from 'react';
-import { Link, Navlink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 
 // == Import : local
 import './style.scss';
 import { saveID } from '../../actions/cakes';
 
+
 // == Composant
 const Card = ({
-   name, thumbnail, season, idCake, onClick,saveID
+   _id, name, thumbnail, season
 }) => {
+  let history = useHistory();
+  function handleClick () {
+    history.push(`/cakes/${_id}`)
+  }
   return (
-  <article className="card">
+  
+  <div className="card">
     <img
       className="card-img"
       src={thumbnail}
@@ -22,11 +28,11 @@ const Card = ({
     <div className="card-content">
       <h1 className="card-name">{name}</h1>
       <p className="card-season">Season : {season}</p>
-      <Link to={`/cakes/${idCake}`} className="card-link" event={saveID(idCake)}>
+      <a href={`/cakes/${_id}`} className="card-link" onClick={handleClick}>
       See details
-      </Link>
+      </a>
     </div>
-  </article>
+  </div>
 )};
 
 Card.propTypes = {
@@ -35,6 +41,7 @@ Card.propTypes = {
   thumbnail: PropTypes.string.isRequired,
   season: PropTypes.string.isRequired,
   saveID: PropTypes.func.isRequired,
+  
   
 };
 

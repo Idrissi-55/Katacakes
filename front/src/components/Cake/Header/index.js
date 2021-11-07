@@ -7,8 +7,7 @@ import './style.scss';
 
 // == Composant
 const Header = ({
-  name, thumbnail, season
-}) => (
+  name, thumbnail, season}) => (
   <header className="presentation">
     <img
       src={thumbnail}
@@ -29,5 +28,4 @@ Header.propTypes = {
 };
 
 // == Export
-export default 
-Header;
+export default Header;

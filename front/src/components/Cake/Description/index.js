@@ -6,13 +6,14 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 // == Composant
-const Desc = ({
-  description
-}) => (
-  <div className="description">
-    <p>{description}</p>;
-  </div>
-);
+const Desc = ({description}) => {
+  return (
+    <div className="description">
+      <p>{description}</p>;
+    </div>
+  );
+
+}
 
 Desc.propTypes = {
   description: PropTypes.string.isRequired,
