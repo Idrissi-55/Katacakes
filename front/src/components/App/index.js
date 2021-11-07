@@ -32,8 +32,8 @@ function App({fetchAllCakes}) {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/cakes/:id">
-          <Error />
+        <Route exact path="/cakes/:_id">
+          <Cake />
         </Route>
         <Route exact path="/About-us">
           <About />

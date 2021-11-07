@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const CakeSchema = new mongoose.Schema({
-   // _id: {type: String}, 
+   
    name: {type: String,required: true, unique: true}, 
    thumbnail: {type: String,required: true,}, 
    season: { type: String,required: true,}, 

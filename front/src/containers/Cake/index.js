@@ -1,21 +1,19 @@
 import { connect } from 'react-redux';
 import Cake from 'src/components/Cake';
 import { withRouter } from 'react-router-dom';
+import { findCake } from 'src/selectors/cakes';
 
-import { fetchCake } from '../../actions/cakes';
 
-const mapStateToProps = (state) => ({
-  name: state.cake.name,
-  thumbnail: state.cake.thumbnail,
-  season: state.cake.seaon,
-  description: state.cake.description,
+const mapStateToProps = (state, ownProps) => {
+  const cakes =  state.cakes.list;
+  const {_id} = ownProps.match.params;
+  console.log(cakes.length);
+  return {
+    cake: findCake(state.cakes.list, _id)
+  };
   
-})
-const mapDispatchToProps = (dispatch) => ({
-  fetchCake: () => {
-    fetchCake();
-  }
-});
+}
+const mapDispatchToProps = {};
 
 const container = connect(mapStateToProps, mapDispatchToProps)(Cake);
 
