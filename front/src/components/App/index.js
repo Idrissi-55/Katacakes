@@ -4,7 +4,6 @@ import { Route, Switch } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 // == Import
-import LoginForm from '../LoginForm';
 import Menu from "src/components/Menu";
 import Cake from "src/containers/Cake";
 import Home from "src/containers/Home";

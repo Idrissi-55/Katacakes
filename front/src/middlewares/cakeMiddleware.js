@@ -24,7 +24,6 @@ export default (store) => (next) => (action) => {
       .catch((err) => {
         console.log("une erreur s'est produite")
       })
-      break;
     }
     break;
 

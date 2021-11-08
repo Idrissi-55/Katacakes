@@ -10,14 +10,14 @@ const LoginForm = ({
   email,
   password,
   changeField,
-  loginSubmit,
+  handleLogin,
   handleLogout,
   isLogged,
   loggedMessage,
 }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    loginSubmit();
+    handleLogin();
   };
 
   return (
@@ -68,7 +68,7 @@ LoginForm.propTypes = {
   email: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
   changeField: PropTypes.func.isRequired,
-  loginSubmit: PropTypes.func.isRequired,
+  handleLogin: PropTypes.func.isRequired,
   handleLogout: PropTypes.func.isRequired,
   isLogged: PropTypes.bool,
   loggedMessage: PropTypes.string,
