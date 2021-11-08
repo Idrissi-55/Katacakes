@@ -22,6 +22,7 @@ const Content = ({ title, text, cakes }) => (
 Content.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
+  
   cakes: PropTypes.arrayOf(
     PropTypes.shape({
       _id: PropTypes.string.isRequired,

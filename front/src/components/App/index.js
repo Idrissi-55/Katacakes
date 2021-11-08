@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 // == Import
 import LoginForm from '../LoginForm';
 import Menu from "src/components/Menu";
-import Cake from "src/containers/Cake"
+import Cake from "src/containers/Cake";
 import Home from "src/containers/Home";
 import Footer from "src/components/Footer";
 import Contact from 'src/components/ContactPage';

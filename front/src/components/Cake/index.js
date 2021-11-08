@@ -1,7 +1,7 @@
 // == Import : npm
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Redirect } from 'react-router-dom';
+import { Redirect} from 'react-router-dom';
 
 // == Import : local
 import './style.scss';
@@ -12,7 +12,7 @@ import Desc from './Description';
 
 // == Composant
 function Cake({ cake }) {
-   
+  
   if (!cake) {
     console.log('Unable to fetch the cake')
     // return <Redirect to="/error" />;
