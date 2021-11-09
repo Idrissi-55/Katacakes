@@ -16,7 +16,6 @@ export default(store) => (next) => (action) => {
     })
     .then((res) => {
       const user=res.data
-      console.log("je suis connecté", user);
       store.dispatch(loginSuccess(user));
     })
     .catch((err) => {

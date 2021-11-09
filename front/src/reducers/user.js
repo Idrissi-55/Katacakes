@@ -1,5 +1,5 @@
 // import actions
-import { LOGIN, LOGIN_SUCCESS, LOGIN_INPUT_CHANGE } from "../actions/user";
+import { LOGIN, LOGIN_SUCCESS, LOGIN_INPUT_CHANGE, LOGOUT } from "../actions/user";
 
 // initialState
 export const initialState = {
@@ -28,7 +28,6 @@ const reducer = (currentState = initialState, action={}) => {
         },
         isLogged: true,
         loggedMessage: `Bonjour ${action.user.pseudo}`
-        // loggedMessage: `Bonjour`
       };
 
     case LOGIN_INPUT_CHANGE:
@@ -39,7 +38,13 @@ const reducer = (currentState = initialState, action={}) => {
           [action.name]: action.text,
         }
       }; 
-
+    
+    case LOGOUT:
+      return {
+        ...currentState,
+          isLogged: false,
+          loggedMessage: '',
+      }
     //default  
     default:
       return currentState;

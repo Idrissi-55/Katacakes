@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import LoginForm from 'src/components/LoginForm';
 import { withRouter } from 'react-router-dom';
 
-import { login, loginInputChange } from '../../actions/user';
+import { login, loginInputChange, logout } from '../../actions/user';
 
 const mapStateToProps = ({user}) => {
   return {
@@ -27,6 +27,7 @@ const mapDispatchToProps =(dispatch) => ({
   
   handleLogout: () => {
     console.log('logout');
+    dispatch(logout());
   }
 });
 
