@@ -23,6 +23,6 @@ const userRoute = require('./app/routes/user')
 app.use(cors());
 app.use(express.json());
 app.use('/api/cakes', cakeRoute);
-app.use('/api/users', userRoute)
+app.use('/api', userRoute)
 
 app.listen(port, () => console.log(`Server is running on ${port}`));

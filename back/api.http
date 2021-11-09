@@ -5,11 +5,11 @@ GET http://localhost:5000/api/cakes
 GET http://localhost:5000/api/cakes/617d4d8f2352f138f62cdb60
 
 ### Login a user
-POST http://localhost:5000/api/users/login 
+POST http://localhost:5000/api/login 
 Content-type: application/json
 
 {
-        "email": "test@test.fr",
+        "email": "test@test.com",
         "password": "12345",
         "pseudo": "katascakes"
 }

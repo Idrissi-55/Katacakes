@@ -4,7 +4,7 @@ import { LOGIN, LOGIN_SUCCESS, LOGIN_INPUT_CHANGE } from "../actions/user";
 // initialState
 export const initialState = {
   auth: {
-    email: 'test@test.fr',
+    email: 'test@test.com',
     password: '12345',
   },
   loggedMessage: '',
@@ -27,7 +27,8 @@ const reducer = (currentState = initialState, action={}) => {
           password: '',
         },
         isLogged: true,
-        loggedMessage: 'Bonjour'
+        loggedMessage: `Bonjour ${action.user.pseudo}`
+        // loggedMessage: `Bonjour`
       };
 
     case LOGIN_INPUT_CHANGE:
