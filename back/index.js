@@ -8,21 +8,21 @@ const dotenv = require("dotenv").config();
 
 //connect to db
 mongoose
-    .connect(
-        process.env.MONGODB_URL,
-        { useNewUrlParser: true, }
+    .connect(process.env.MONGODB_URL,
+        { useNewUrlParser: true},
     )
     .then(() => console.log("Connected to DB successfuly"))
     .catch((err)=>{
         console.log(err);
     })
 
-
 //routers
 const cakeRoute = require('./app/routes/cake');
+const userRoute = require('./app/routes/user')
 
 app.use(cors());
 app.use(express.json());
 app.use('/api/cakes', cakeRoute);
+app.use('/api/users', userRoute)
 
 app.listen(port, () => console.log(`Server is running on ${port}`));
