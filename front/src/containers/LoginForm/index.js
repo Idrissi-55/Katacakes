@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 import LoginForm from 'src/components/LoginForm';
 import { withRouter } from 'react-router-dom';
 
+import { login, loginInputChange } from '../../actions/user';
+
 const mapStateToProps = ({user}) => {
   return {
     email: user.auth.email,
@@ -12,12 +14,17 @@ const mapStateToProps = ({user}) => {
 };
 
 const mapDispatchToProps =(dispatch) => ({
+
   handleLogin: () => {
     console.log('login');
+    dispatch(login());
   },
-  changeField: () => {
-    console.log('change');
+
+  changeField: (textInput, fieldName) => {
+    console.log('change', textInput, fieldName);
+    dispatch(loginInputChange(textInput, fieldName));
   },
+  
   handleLogout: () => {
     console.log('logout');
   }

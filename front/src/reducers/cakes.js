@@ -1,5 +1,5 @@
-// import data from 'src/data';
-import { FETCH_ALL_CAKES, FETCH_ALL_CAKES_SUCCESS, FETCH_CAKE_SUCCESS, SAVE_ID } from "../actions/cakes";
+
+import { FETCH_ALL_CAKES, FETCH_ALL_CAKES_SUCCESS } from "../actions/cakes";
 
 export const initialState = {
   list: [],

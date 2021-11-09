@@ -27,21 +27,7 @@ export default (store) => (next) => (action) => {
     }
     break;
 
-  // case FETCH_CAKE: {
-  //   next(action);
-  //   const {cake} = store.getState();
-  //   axios({
-  //     method: 'get',
-  //     url: `${URL}/cakes/${cake._id}`,
-  //   })
-  //   .then((res) => {
-  //     console.log(`je fetch une cake : ${res.data}`);
-  //     store.dispatch(fetchCakeSuccess(res.data))
-  //   })
-  //   .catch((err) => {
-  //     console.log("une erreur s'est produite");
-  //   })
-  // }
+  
     default:
       next(action);
   }
