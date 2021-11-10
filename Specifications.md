@@ -30,11 +30,11 @@ Home page
 
 ## Features V2 : Week 3
 - Create routes on back and link it to front (login, home page, details of page)
+- JWT login
 - Some more CSS (responsive)
 - Add to cart feature
 - paiement feature
 - Some TDD TESTS
-
 ## 
 
 
