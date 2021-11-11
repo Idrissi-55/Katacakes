@@ -20,9 +20,12 @@ mongoose
 const cakeRoute = require('./app/routes/cake');
 const userRoute = require('./app/routes/user')
 
-app.use(express.static(path.join(__dirname,"front/build")))
-app.use(cors());
 app.use(express.json());
+
+app.use(cors());
+
+app.use(express.static(path.join(__dirname,'../front/dist'))); 
+
 app.use('/api/cakes', cakeRoute);
 app.use('/api', userRoute)
 
