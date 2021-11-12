@@ -13,7 +13,6 @@
 
 .app {
   animation: pop .5s;
-  padding-left: vars.$menuWidth;
   
   @media (max-width: vars.$small) {
     padding-left: vars.$smallMenuWidth;

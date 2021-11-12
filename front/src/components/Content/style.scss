@@ -3,7 +3,9 @@
 @use 'sass:math';
 
 .content {
-  padding-top: 12em;;
+  padding-top: 13em;
+  padding-right: 20px;
+  padding-left: 20px;
 
   &-title {
     font-size: 2em;
@@ -17,5 +19,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 40px 40px;
   }
 }
