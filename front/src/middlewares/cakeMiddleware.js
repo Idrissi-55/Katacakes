@@ -4,6 +4,7 @@ import { fetchAllCakes, fetchAllCakesSuccess, FETCH_ALL_CAKES, FETCH_CAKE, feftc
 
 //URL
 const URL = "http://localhost:5000/api";
+const HEROKU_URL = "https://katascakes.herokuapp.com/api"
 
 export default (store) => (next) => (action) => {
   switch (action.type) {
@@ -12,7 +13,7 @@ export default (store) => (next) => (action) => {
       console.log("je cherche les cakes");
       axios({
         method: 'get',
-        url: `${URL}/cakes`,
+        url: `${HEROKU_URL}/cakes`,
       })
       .then((res) => {
         console.log("je reçois ça", res.data);

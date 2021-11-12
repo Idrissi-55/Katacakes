@@ -24,10 +24,10 @@ app.use(express.json());
 
 app.use(cors());
 
-app.use(express.static(path.join(__dirname,'../front/dist'))); 
+// app.use(express.static(path.join(__dirname,'../front/dist'))); 
 
 app.use('/api/cakes', cakeRoute);
 app.use('/api', userRoute)
-app.get('/', (req, res) => {res.send('Hello from Express!')})
+// app.get('/', (req, res) => {res.send('Hello from Express!')})
 
 app.listen(port, () => console.log(`Server is running on ${port}`));

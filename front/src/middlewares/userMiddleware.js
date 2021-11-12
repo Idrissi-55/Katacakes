@@ -2,6 +2,8 @@ import axios from 'axios';
 import {LOGIN, loginSuccess} from 'src/actions/user'
 // Back server
 const URL = "http://localhost:5000/api";
+const HEROKU_URL = "https://katascakes.herokuapp.com/api"
+
 
 export default(store) => (next) => (action) => {
   switch(action.type) {
@@ -11,7 +13,7 @@ export default(store) => (next) => (action) => {
     const {auth} = store.getState().user;
     axios({
       method: 'post',
-      url: `${URL}/login`,
+      url: `${HEROKU_URL}/login`,
       data: auth,
     })
     .then((res) => {
