@@ -13,7 +13,7 @@ export default(store) => (next) => (action) => {
     const {auth} = store.getState().user;
     axios({
       method: 'post',
-      url: `${URL}/login`,
+      url: `${HEROKU_URL}/login`,
       data: auth,
     })
     .then((res) => {

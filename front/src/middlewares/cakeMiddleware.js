@@ -13,7 +13,7 @@ export default (store) => (next) => (action) => {
       console.log("je cherche les cakes");
       axios({
         method: 'get',
-        url: `${URL}/cakes`,
+        url: `${HEROKU_URL}/cakes`,
       })
       .then((res) => {
         console.log("je reçois ça", res.data);
