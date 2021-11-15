@@ -28,6 +28,6 @@ app.use(cors());
 
 app.use('/api/cakes', cakeRoute);
 app.use('/api', userRoute)
-// app.get('/', (req, res) => {res.send('Hello from Express!')})
+app.get('/', (req, res) => {res.send('Hello from Express!')})
 
 app.listen(port, () => console.log(`Server is running on ${port}`));
